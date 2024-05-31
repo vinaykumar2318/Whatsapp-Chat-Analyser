@@ -39,3 +39,4 @@ This project provides tools to analyze chat data from messaging platforms. It in
      ```sh
     streamlit run app.py
     ```
+2. Download a chat.txt file in 24-hour format and now you are ready to do analysis on it.
