@@ -1,9 +1,19 @@
 import pandas as pd
-import emoji
 from collections import Counter
 from wordcloud import WordCloud
 from urlextract import URLExtract
 extract = URLExtract()
+
+def load_emojis(file_path='emojis.txt'):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        emojis = file.read().splitlines()
+    return set(emojis)
+
+emojis = load_emojis()
+
+def is_emoji(char):
+    return char in emojis
+
 
 def doCalc(userSel,df):
     if userSel != 'Overall':
@@ -72,7 +82,7 @@ def mostUEmoji(userSel,df):
     
     emojis = []
     for msg in df['messages']:
-        emojis.extend([c for c in msg if emoji.is_emoji(c)])
+        emojis.extend([c for c in msg if is_emoji(c)])
     
     emojiDF = pd.DataFrame(Counter(emojis).most_common(len(Counter(emojis))), columns=['Emoji', 'Frequency'])
     return emojiDF
