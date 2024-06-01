@@ -4,3 +4,6 @@ seaborn
 emoji
 pandas
 wordcloud
+urlextract
+dataProcess
+functions
