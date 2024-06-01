@@ -4,5 +4,3 @@ seaborn
 pandas
 wordcloud
 urlextract
-dataProcess
-functions
