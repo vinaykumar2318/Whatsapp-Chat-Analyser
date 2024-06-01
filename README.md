@@ -1,7 +1,8 @@
 # Chat Analysis Project
 
 This project provides tools to analyze chat data from messaging platforms. It includes functions to calculate various statistics, generate word clouds, find the most common words and emojis, and create various visualizations of chat activity. The analysis results are presented using Streamlit for an interactive web-based interface.
-You can access the app here :-  <a href="https://whatsapp-chat-analyser-2318.streamlit.app/" target="_blank">https://whatsapp-chat-analyser-2318.streamlit.app/</a>
+You can access the app <a href="https://whatsapp-chat-analyser-2318.streamlit.app/" target="_blank">here</a>.
+
 
 ## Features
 
