@@ -12,7 +12,8 @@ if uploaded_file is not None:
     df = dataProcess.dataProcessing(data)
 
     userList = df['users'].unique().tolist()
-    userList.remove('Group Notification')
+    if 'Group Notification' in userList:
+        userList.remove('Group Notification')
     userList.sort()
     userList.insert(0,'Overall')
     userSel = st.sidebar.selectbox("Show Analysis w.r.t :", userList)
